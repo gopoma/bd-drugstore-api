@@ -1,0 +1,5 @@
+USE BD_BOTICA;
+
+SELECT * FROM GZZ_ROL;
+INSERT INTO GZZ_ROL (RolCod, RolDes)
+VALUES (1, "amongus");
