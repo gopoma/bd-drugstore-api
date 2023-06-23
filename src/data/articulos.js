@@ -1,6 +1,6 @@
 const categorias = require('./categorias');
 const laboratorios = require('./laboratorios');
-const tiposUnidadesMedida = require('./tiposUnidadesMedida');
+const tiposUnidadesMedida = require('./tipos-unidades-medida');
 const EstadoRegistro = require('../config/estado-registro');
 
 function pickRandomCode(data) {
@@ -9,7 +9,6 @@ function pickRandomCode(data) {
 
 const articulos = [
   {
-    ArtCod: 1,
     ArtNom: 'BIOELECTRO',
     ArtLab: pickRandomCode(laboratorios),
     ArtCat: pickRandomCode(categorias),
@@ -22,7 +21,6 @@ const articulos = [
     ArtEstReg: EstadoRegistro.ACTIVO,
   },
   {
-    ArtCod: 2,
     ArtNom: 'PANADOL FORTE',
     ArtLab: pickRandomCode(laboratorios),
     ArtCat: pickRandomCode(categorias),
@@ -35,7 +33,6 @@ const articulos = [
     ArtEstReg: EstadoRegistro.ACTIVO,
   },
   {
-    ArtCod: 3,
     ArtNom: 'METAMIZOL',
     ArtLab: pickRandomCode(laboratorios),
     ArtCat: pickRandomCode(categorias),
@@ -48,7 +45,6 @@ const articulos = [
     ArtEstReg: EstadoRegistro.ACTIVO,
   },
   {
-    ArtCod: 4,
     ArtNom: 'FRAMYCORT',
     ArtLab: pickRandomCode(laboratorios),
     ArtCat: pickRandomCode(categorias),

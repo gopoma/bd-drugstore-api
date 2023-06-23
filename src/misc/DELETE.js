@@ -1,5 +1,5 @@
-const connection = require('./db/connection');
-const TableNames = require('./config/TableNames');
+const connection = require('../db/connection');
+const { TableNames } = require('../config');
 require('colors');
 
 (async () => {

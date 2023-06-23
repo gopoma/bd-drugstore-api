@@ -1,5 +1,5 @@
-const connection = require('./db/connection');
-const { deleteTables } = require('./helpers');
+const connection = require('../db/connection');
+const { deleteTables } = require('../helpers');
 require('colors');
 
 (async () => {

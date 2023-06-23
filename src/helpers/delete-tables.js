@@ -1,5 +1,5 @@
 const connection = require('../db/connection');
-const TableNames = require('../config/TableNames');
+const { TableNames } = require('../config');
 
 async function deleteTables() {
   const tableNamesValues = Object.values(TableNames);

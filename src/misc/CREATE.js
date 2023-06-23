@@ -1,12 +1,12 @@
-const connection = require('./db/connection');
-const TableNames = require('./config/TableNames');
+const connection = require('../db/connection');
+const { TableNames } = require('../config');
 const {
   laboratorios,
   categorias,
   tiposUnidadesMedida,
   articulos,
-} = require('./data');
-const { deleteTables, insertMany } = require('./helpers');
+} = require('../data');
+const { deleteTables, insertMany } = require('../helpers');
 require('colors');
 
 async function insertarCategorias() {

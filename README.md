@@ -13,4 +13,7 @@ git init
 # add .gitignore
 
 npm i mysql2
+npm i dotenv
+npm i colors
+npm i express
 ```

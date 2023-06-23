@@ -1,11 +1,11 @@
-require('dotenv').config();
+const config = require('./environment');
+const EstadoRegistro = require('./estado-registro');
+const { TableNames, TableCodFields } = require('./tables');
 
-const config = {
-  dbHost: process.env.DB_HOST,
-  dbPort: process.env.DB_PORT,
-  dbUser: process.env.DB_USER,
-  dbPassword: process.env.DB_PASSWORD,
-  dbName: process.env.DB_NAME,
+module.exports = {
+  ...config,
+  config,
+  EstadoRegistro,
+  TableNames,
+  TableCodFields,
 };
-
-module.exports = config;

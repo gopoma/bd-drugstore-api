@@ -1,7 +1,9 @@
-const deleteTables = require('./deleteTables');
-const insertMany = require('./insertMany');
+const deleteTables = require('./delete-tables');
+const insertMany = require('./insert-many');
+const MySQL = require('./mysql');
 
 module.exports = {
   deleteTables,
   insertMany,
+  MySQL,
 };
