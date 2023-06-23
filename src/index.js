@@ -1,4 +1,6 @@
+const cors = require('cors');
 const express = require('express');
+const helmet = require('helmet');
 const morgan = require('morgan');
 
 // Importando las Variables de Entorno
@@ -11,6 +13,12 @@ const app = express();
 
 // Logging
 app.use(morgan('dev'));
+
+// Implementando CORS
+app.use(cors());
+
+// Implementando cabeceras HTTP seguras
+app.use(helmet());
 
 // Configurando el Parser
 app.use(express.json());
