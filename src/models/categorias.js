@@ -13,7 +13,6 @@ class CategoriaModel {
   static async get(cod) {
     const categoria = await MySQL.get({
       tableName: TableNames.CATEGORIA,
-      codField: 'CatCod',
       cod,
     });
 
@@ -24,7 +23,6 @@ class CategoriaModel {
     const categoria = await MySQL.create({
       tableName: TableNames.CATEGORIA,
       data,
-      codField: 'CatCod',
     });
 
     return categoria;
@@ -33,7 +31,6 @@ class CategoriaModel {
   static async edit(cod, data) {
     const categoria = await MySQL.edit({
       tableName: TableNames.CATEGORIA,
-      codField: 'CatCod',
       cod,
       data,
     });
@@ -44,7 +41,6 @@ class CategoriaModel {
   static async delete(cod) {
     const categoria = await MySQL.delete({
       tableName: TableNames.CATEGORIA,
-      codField: 'CatCod',
       cod,
     });
 

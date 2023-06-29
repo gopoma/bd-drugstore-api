@@ -7,7 +7,13 @@ const morgan = require('morgan');
 const { env, port } = require('./config');
 
 // Importando las Rutas
-const { categorias } = require('./routes');
+const {
+  categorias,
+  laboratorios,
+  roles,
+  tiposEstadoPedido,
+  tiposUnidadMedida,
+} = require('./routes');
 
 const app = express();
 
@@ -25,6 +31,10 @@ app.use(express.json());
 
 // Utilizando Rutas
 categorias(app);
+laboratorios(app);
+roles(app);
+tiposEstadoPedido(app);
+tiposUnidadMedida(app);
 
 app.get('/', (req, res) => res.redirect('/api'));
 app.get('/api', (req, res) => res.json({
