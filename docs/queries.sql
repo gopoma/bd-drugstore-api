@@ -57,3 +57,44 @@ WHERE ArtCod=1;
 
 SELECT * FROM V1M_ARTICULO;
 DELETE FROM V1M_ARTICULO WHERE ArtCod BETWEEN 5 AND 6;
+
+SELECT * FROM GZZ_ROL;
+INSERT INTO GZZ_ROL (RolDes) VALUES 
+	("ADMIN"), ("STOREKEEPER"), ("REGULAR");
+SELECT * FROM GZM_USUARIO;
+INSERT INTO GZM_USUARIO (
+	UsuNom, UsuApe,
+    RolCod,
+    UsuEma, UsuTel, UsuDir, 
+    UsuFecInsAño, UsuFecInsMes, UsuFecInsDia,
+    UsuEstReg
+) VALUES (
+	"SOME NAME", "SOME SURNAME",
+    1,
+    "some@email.com", "999999999", "SOME ADDRESS",
+    2023, 7, 8,
+    "A"
+);
+
+# READ ONE USER
+SELECT
+UsuCod, UsuNom, UsuApe,
+RolDes AS UsuRol,
+UsuEma, UsuTel, UsuDir,
+UsuFecInsAño, UsuFecInsMes, UsuFecInsDia,
+UsuEstReg
+FROM GZM_USUARIO
+JOIN GZZ_ROL ON GZM_USUARIO.RolCod=GZZ_ROL.RolCod
+ORDER BY UsuCod DESC;
+
+SELECT
+UsuCod, UsuNom, UsuApe,
+RolDes AS UsuRol,
+UsuEma, UsuTel, UsuDir,
+UsuFecInsAño, UsuFecInsMes, UsuFecInsDia,
+UsuEstReg
+FROM GZM_USUARIO
+JOIN GZZ_ROL ON GZM_USUARIO.RolCod=GZZ_ROL.RolCod
+WHERE UsuCod=2;
+
+SELECT * FROM V1T_PEDIDO;
