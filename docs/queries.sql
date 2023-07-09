@@ -26,3 +26,34 @@ SET ArtPreUni=20.28,
 ArtSto=30,
 ArtCat=3
 WHERE ArtCod=4;
+
+SELECT * FROM V1M_ARTICULO;
+
+# READ ALL
+SELECT ArtCod, ArtNom,
+LabDes AS ArtLab,
+CatDes AS ArtCat,
+TipUniMedDes AS ArtTipUniMed,
+ArtFecVenAño, ArtFecVenMes, ArtFecVenDia,
+ArtPreUni, ArtSto, ArtEstReg
+FROM V1M_ARTICULO
+JOIN V1Z_LABORATORIO ON ArtLab=LabCod
+JOIN V1Z_CATEGORIA ON ArtCat=CatCod
+JOIN V1Z_TIPO_UNIDAD_MEDIDA ON ArtTipUniMed=TipUniMedCod
+ORDER BY ArtCod DESC;
+
+# READ ONE
+SELECT ArtCod, ArtNom,
+LabDes AS ArtLab,
+CatDes AS ArtCat,
+TipUniMedDes AS ArtTipUniMed,
+ArtFecVenAño, ArtFecVenMes, ArtFecVenDia,
+ArtPreUni, ArtSto, ArtEstReg
+FROM V1M_ARTICULO
+JOIN V1Z_LABORATORIO ON ArtLab=LabCod
+JOIN V1Z_CATEGORIA ON ArtCat=CatCod
+JOIN V1Z_TIPO_UNIDAD_MEDIDA ON ArtTipUniMed=TipUniMedCod
+WHERE ArtCod=1;
+
+SELECT * FROM V1M_ARTICULO;
+DELETE FROM V1M_ARTICULO WHERE ArtCod BETWEEN 5 AND 6;

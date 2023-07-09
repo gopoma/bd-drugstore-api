@@ -13,6 +13,8 @@ const {
   roles,
   tiposEstadoPedido,
   tiposUnidadMedida,
+
+  articulos,
 } = require('./routes');
 
 const app = express();
@@ -35,6 +37,7 @@ laboratorios(app);
 roles(app);
 tiposEstadoPedido(app);
 tiposUnidadMedida(app);
+articulos(app);
 
 app.get('/', (req, res) => res.redirect('/api'));
 app.get('/api', (req, res) => res.json({
