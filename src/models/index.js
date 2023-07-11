@@ -5,6 +5,7 @@ const TipoEstadoPedidoModel = require('./tipos-estado-pedido');
 const TipoUnidadMedidaModel = require('./tipos-unidad-medida');
 
 const ArticuloModel = require('./articulos');
+const UsuarioModel = require('./usuarios');
 
 module.exports = {
   CategoriaModel,
@@ -14,4 +15,5 @@ module.exports = {
   TipoUnidadMedidaModel,
 
   ArticuloModel,
+  UsuarioModel,
 };

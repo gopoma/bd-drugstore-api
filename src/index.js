@@ -15,6 +15,7 @@ const {
   tiposUnidadMedida,
 
   articulos,
+  usuarios,
 } = require('./routes');
 
 const app = express();
@@ -38,6 +39,7 @@ roles(app);
 tiposEstadoPedido(app);
 tiposUnidadMedida(app);
 articulos(app);
+usuarios(app);
 
 app.get('/', (req, res) => res.redirect('/api'));
 app.get('/api', (req, res) => res.json({
