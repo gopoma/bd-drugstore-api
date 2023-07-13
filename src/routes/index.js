@@ -6,6 +6,7 @@ const tiposUnidadMedida = require('./tipos-unidad-medida');
 
 const articulos = require('./articulos');
 const usuarios = require('./usuarios');
+const pedidos = require('./pedidos');
 
 module.exports = {
   categorias,
@@ -16,4 +17,5 @@ module.exports = {
 
   articulos,
   usuarios,
+  pedidos,
 };
