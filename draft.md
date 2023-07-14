@@ -19,7 +19,7 @@ const pedido = {
   PedEstReg,
   articulos: [
     {
-      PedArtArtCod: 3
+      PedArtArtCod: 3,
       PedArtArtNom: "PRODUCTO 3",
       PedArtPreUni: 99.99,
       PedArtCanSol: 20,
@@ -27,7 +27,7 @@ const pedido = {
       PedArtEstReg: "A"
     },
     {
-      PedArtArtCod: 4
+      PedArtArtCod: 4,
       PedArtArtNom: "PRODUCTO 4",
       PedArtPreUni: 199.99,
       PedArtCanSol: 30,
@@ -35,9 +35,16 @@ const pedido = {
       PedArtEstReg: "A"
     },
     {
-      PedArtArtCod: 5
+      PedArtArtCod: 5,
       PedArtArtNom: "PRODUCTO 5",
       PedArtPreUni: 299.99,
+      PedArtCanSol: 20,
+      PedArtCanDes: 20,
+      PedArtEstReg: "A"
+    },
+    {
+      PedArtArtNom: "PRODUCTO 5",
+      PedArtPreUni: 399.99,
       PedArtCanSol: 20,
       PedArtCanDes: 20,
       PedArtEstReg: "A"

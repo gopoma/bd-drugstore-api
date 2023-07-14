@@ -88,6 +88,24 @@ class PedidoService {
       };
     }
   }
+
+  async editArticulo(num, artCod, data) {
+    try {
+      const PedNum = await PedidoModel.editArticulo(num, artCod, data);
+      const { pedido } = await this.get(PedNum);
+
+      return {
+        success: true,
+        pedido,
+      };
+    } catch (error) {
+      console.log(error);
+      return {
+        success: false,
+        messages: ['Consulte al Administrador'],
+      };
+    }
+  }
 }
 
 module.exports = PedidoService;

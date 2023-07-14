@@ -30,6 +30,12 @@ function pedidos(app) {
 
     return res.status(result.success ? 202 : 400).json(result);
   });
+
+  router.patch('/:num/articulos/:cod', async (req, res) => {
+    const result = await pedidoServ.editArticulo(req.params.num, req.params.cod, req.body);
+
+    return res.status(result.success ? 202 : 400).json(result);
+  });
 }
 
 module.exports = pedidos;

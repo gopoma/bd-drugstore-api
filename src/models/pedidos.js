@@ -161,6 +161,20 @@ class PedidoModel {
         data.PedArtCanSol, data.PedArtCanDes, data.PedArtEstReg],
     });
   }
+
+  static async editArticulo(num, artCod, data) {
+    await connection.query({
+      sql: `UPDATE V1T_PEDIDO_ARTICULO
+        SET PedArtPreUni=?,
+        PedArtCanSol=?, PedArtCanDes=?,
+        PedArtEstReg=?
+        WHERE PedArtPed=? AND PedArtArt=?`,
+      values: [data.PedArtPreUni, data.PedArtCanSol, data.PedArtCanDes, data.PedArtEstReg,
+        num, artCod],
+    });
+
+    return num;
+  }
 }
 
 module.exports = PedidoModel;
