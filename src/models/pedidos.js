@@ -12,8 +12,8 @@ class PedidoModel {
         UsuNom AS PedCliNom,
         UsuApe AS PedCliApe,
         UsuEma AS PedCliEma,
-        UsuTel AS PedCliUsuTel,
-        UsuDir AS PedCliUsuDir,
+        UsuTel AS PedCliTel,
+        UsuDir AS PedCliDir,
         UsuEstReg AS PedCliEstReg,
 
         PedFecAño, PedFecMes, PedFecDia,
@@ -29,7 +29,7 @@ class PedidoModel {
     const clientNormalizedPedidos = pedidos.map((pedido) => {
       const {
         PedCliCod, PedCliNom, PedCliApe, PedCliEma,
-        PedCliUsuTel, PedCliUsuDir, PedCliEstReg,
+        PedCliTel, PedCliDir, PedCliEstReg,
         ...data
       } = pedido;
 
@@ -40,8 +40,8 @@ class PedidoModel {
           PedCliNom,
           PedCliApe,
           PedCliEma,
-          PedCliUsuTel,
-          PedCliUsuDir,
+          PedCliTel,
+          PedCliDir,
           PedCliEstReg,
         },
       };
@@ -82,8 +82,8 @@ class PedidoModel {
         UsuNom AS PedCliNom,
         UsuApe AS PedCliApe,
         UsuEma AS PedCliEma,
-        UsuTel AS PedCliUsuTel,
-        UsuDir AS PedCliUsuDir,
+        UsuTel AS PedCliTel,
+        UsuDir AS PedCliDir,
         UsuEstReg AS PedCliEstReg,
 
         PedFecAño, PedFecMes, PedFecDia,
@@ -112,7 +112,7 @@ class PedidoModel {
 
     const {
       PedCliCod, PedCliNom, PedCliApe, PedCliEma,
-      PedCliUsuTel, PedCliUsuDir, PedCliEstReg,
+      PedCliTel, PedCliDir, PedCliEstReg,
       ...data
     } = pedido;
     return {
@@ -122,8 +122,8 @@ class PedidoModel {
         PedCliNom,
         PedCliApe,
         PedCliEma,
-        PedCliUsuTel,
-        PedCliUsuDir,
+        PedCliTel,
+        PedCliDir,
         PedCliEstReg,
       },
       articulos,
