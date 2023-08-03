@@ -110,7 +110,7 @@ INSERT INTO V1T_PEDIDO (
     TipEstPedCod,
 	PedEstReg
 ) VALUES (
-	2,
+	1,
 	2023, 7, 11,
     1,
     "A"
@@ -126,8 +126,8 @@ UsuCod AS PedCliCod,
 UsuNom AS PedCliNom,
 UsuApe AS PedCliApe,
 UsuEma AS PedCliEma,
-UsuTel AS PedCliUsuTel,
-UsuDir AS PedCliUsuDir,
+UsuTel AS PedCliTel,
+UsuDir AS PedCliDir,
 UsuEstReg AS PedCliEstReg,
 
 PedFecAño, PedFecMes, PedFecDia,
@@ -149,9 +149,9 @@ PedArtPreUni,
 PedArtCanSol, PedArtCanDes,
 PedArtEstReg
 ) VALUES (
-1, 4,
-25.75,
-40, 20,
+2, 3,
+28,
+69, 69,
 "A"
 );
 
