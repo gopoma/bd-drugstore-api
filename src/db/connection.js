@@ -1,5 +1,5 @@
 // get the client
-const oracledb = require('./oracledb');
+const oracledb = require('./.oracledb');
 const {
   dbHost,
   dbPort,
