@@ -1,6 +1,6 @@
 const { TableNames } = require('../config');
 const connection = require('../db/connection');
-const { MySQL } = require('../helpers');
+const { OracleDB } = require('../helpers');
 
 class ArticuloModel {
   static async getAll() {
@@ -40,7 +40,7 @@ class ArticuloModel {
   }
 
   static async create(data) {
-    const articulo = await MySQL.create({
+    const articulo = await OracleDB.create({
       tableName: TableNames.ARTICULO,
       data,
     });
@@ -49,7 +49,7 @@ class ArticuloModel {
   }
 
   static async edit(cod, data) {
-    const articulo = await MySQL.edit({
+    const articulo = await OracleDB.edit({
       tableName: TableNames.ARTICULO,
       cod,
       data,
@@ -59,7 +59,7 @@ class ArticuloModel {
   }
 
   static async delete(cod) {
-    const articulo = await MySQL.delete({
+    const articulo = await OracleDB.delete({
       tableName: TableNames.ARTICULO,
       cod,
     });

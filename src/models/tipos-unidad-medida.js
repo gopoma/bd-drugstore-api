@@ -1,9 +1,9 @@
 const { TableNames } = require('../config');
-const { MySQL } = require('../helpers');
+const { OracleDB } = require('../helpers');
 
 class TipoUnidadMedidaModel {
   static async getAll() {
-    const tiposUnidadMedida = await MySQL.getAll({
+    const tiposUnidadMedida = await OracleDB.getAll({
       tableName: TableNames.TIPO_UNIDAD_MEDIDA,
     });
 
@@ -11,7 +11,7 @@ class TipoUnidadMedidaModel {
   }
 
   static async get(cod) {
-    const tipoUnidadMedida = await MySQL.get({
+    const tipoUnidadMedida = await OracleDB.get({
       tableName: TableNames.TIPO_UNIDAD_MEDIDA,
       cod,
     });
@@ -20,7 +20,7 @@ class TipoUnidadMedidaModel {
   }
 
   static async create(data) {
-    const tipoUnidadMedida = await MySQL.create({
+    const tipoUnidadMedida = await OracleDB.create({
       tableName: TableNames.TIPO_UNIDAD_MEDIDA,
       data,
     });
@@ -29,7 +29,7 @@ class TipoUnidadMedidaModel {
   }
 
   static async edit(cod, data) {
-    const tipoUnidadMedida = await MySQL.edit({
+    const tipoUnidadMedida = await OracleDB.edit({
       tableName: TableNames.TIPO_UNIDAD_MEDIDA,
       cod,
       data,
@@ -39,7 +39,7 @@ class TipoUnidadMedidaModel {
   }
 
   static async delete(cod) {
-    const tipoUnidadMedida = await MySQL.delete({
+    const tipoUnidadMedida = await OracleDB.delete({
       tableName: TableNames.TIPO_UNIDAD_MEDIDA,
       cod,
     });

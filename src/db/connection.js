@@ -1,5 +1,5 @@
 // get the client
-const mysql = require('mysql2/promise');
+const oracledb = require('./oracledb');
 const {
   dbHost,
   dbPort,
@@ -9,7 +9,7 @@ const {
 } = require('../config');
 
 // Create the connection pool
-const connection = mysql.createPool({
+const connection = oracledb.createPool({
   host: dbHost,
   port: dbPort,
   user: dbUser,

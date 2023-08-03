@@ -1,6 +1,6 @@
 const { TableNames } = require('../config');
 const connection = require('../db/connection');
-const { MySQL } = require('../helpers');
+const { OracleDB } = require('../helpers');
 
 class PedidoModel {
   static async getAll() {
@@ -131,7 +131,7 @@ class PedidoModel {
   }
 
   static async create(data) {
-    const pedido = await MySQL.create({
+    const pedido = await OracleDB.create({
       tableName: TableNames.PEDIDO,
       data,
     });
@@ -140,7 +140,7 @@ class PedidoModel {
   }
 
   static async edit(num, data) {
-    const pedido = await MySQL.edit({
+    const pedido = await OracleDB.edit({
       tableName: TableNames.PEDIDO,
       cod: num,
       data,

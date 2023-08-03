@@ -1,9 +1,9 @@
 const deleteTables = require('./delete-tables');
 const insertMany = require('./insert-many');
-const MySQL = require('./mysql');
+const OracleDB = require('./oracledb');
 
 module.exports = {
   deleteTables,
   insertMany,
-  MySQL,
+  OracleDB,
 };

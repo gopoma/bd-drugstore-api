@@ -1,9 +1,9 @@
 const { TableNames } = require('../config');
-const { MySQL } = require('../helpers');
+const { OracleDB } = require('../helpers');
 
 class CategoriaModel {
   static async getAll() {
-    const categorias = await MySQL.getAll({
+    const categorias = await OracleDB.getAll({
       tableName: TableNames.CATEGORIA,
     });
 
@@ -11,7 +11,7 @@ class CategoriaModel {
   }
 
   static async get(cod) {
-    const categoria = await MySQL.get({
+    const categoria = await OracleDB.get({
       tableName: TableNames.CATEGORIA,
       cod,
     });
@@ -20,7 +20,7 @@ class CategoriaModel {
   }
 
   static async create(data) {
-    const categoria = await MySQL.create({
+    const categoria = await OracleDB.create({
       tableName: TableNames.CATEGORIA,
       data,
     });
@@ -29,7 +29,7 @@ class CategoriaModel {
   }
 
   static async edit(cod, data) {
-    const categoria = await MySQL.edit({
+    const categoria = await OracleDB.edit({
       tableName: TableNames.CATEGORIA,
       cod,
       data,
@@ -39,7 +39,7 @@ class CategoriaModel {
   }
 
   static async delete(cod) {
-    const categoria = await MySQL.delete({
+    const categoria = await OracleDB.delete({
       tableName: TableNames.CATEGORIA,
       cod,
     });

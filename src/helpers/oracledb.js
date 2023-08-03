@@ -1,7 +1,7 @@
 const connection = require('../db/connection');
 const { TableCodFields } = require('../config');
 
-class MySQL {
+class OracleDB {
   static async getAll({ tableName }) {
     const [items] = await connection.query({
       sql: `SELECT * FROM ${tableName}`,
@@ -25,7 +25,7 @@ class MySQL {
       values: [Object.keys(data), Object.values(data)],
     });
 
-    return MySQL.get({ tableName, cod });
+    return OracleDB.get({ tableName, cod });
   }
 
   // eslint-disable-next-line
@@ -44,11 +44,11 @@ class MySQL {
       values: [...values, TableCodFields[tableName], cod],
     });
 
-    return MySQL.get({ tableName, cod });
+    return OracleDB.get({ tableName, cod });
   }
 
   static async delete({ tableName, cod }) {
-    const categoria = await MySQL.get({ tableName, cod });
+    const categoria = await OracleDB.get({ tableName, cod });
 
     await connection.query({
       sql: `DELETE FROM ${tableName} WHERE ?? = ?`,
@@ -59,4 +59,4 @@ class MySQL {
   }
 }
 
-module.exports = MySQL;
+module.exports = OracleDB;

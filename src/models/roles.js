@@ -1,9 +1,9 @@
 const { TableNames } = require('../config');
-const { MySQL } = require('../helpers');
+const { OracleDB } = require('../helpers');
 
 class RolModel {
   static async getAll() {
-    const roles = await MySQL.getAll({
+    const roles = await OracleDB.getAll({
       tableName: TableNames.ROL,
     });
 
@@ -11,7 +11,7 @@ class RolModel {
   }
 
   static async get(cod) {
-    const rol = await MySQL.get({
+    const rol = await OracleDB.get({
       tableName: TableNames.ROL,
       cod,
     });
@@ -20,7 +20,7 @@ class RolModel {
   }
 
   static async create(data) {
-    const rol = await MySQL.create({
+    const rol = await OracleDB.create({
       tableName: TableNames.ROL,
       data,
     });
@@ -29,7 +29,7 @@ class RolModel {
   }
 
   static async edit(cod, data) {
-    const rol = await MySQL.edit({
+    const rol = await OracleDB.edit({
       tableName: TableNames.ROL,
       cod,
       data,
@@ -39,7 +39,7 @@ class RolModel {
   }
 
   static async delete(cod) {
-    const rol = await MySQL.delete({
+    const rol = await OracleDB.delete({
       tableName: TableNames.ROL,
       cod,
     });

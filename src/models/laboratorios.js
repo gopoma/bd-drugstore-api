@@ -1,9 +1,9 @@
 const { TableNames } = require('../config');
-const { MySQL } = require('../helpers');
+const { OracleDB } = require('../helpers');
 
 class LaboratorioModel {
   static async getAll() {
-    const laboratorios = await MySQL.getAll({
+    const laboratorios = await OracleDB.getAll({
       tableName: TableNames.LABORATORIO,
     });
 
@@ -11,7 +11,7 @@ class LaboratorioModel {
   }
 
   static async get(cod) {
-    const laboratorio = await MySQL.get({
+    const laboratorio = await OracleDB.get({
       tableName: TableNames.LABORATORIO,
       cod,
     });
@@ -20,7 +20,7 @@ class LaboratorioModel {
   }
 
   static async create(data) {
-    const laboratorio = await MySQL.create({
+    const laboratorio = await OracleDB.create({
       tableName: TableNames.LABORATORIO,
       data,
     });
@@ -29,7 +29,7 @@ class LaboratorioModel {
   }
 
   static async edit(cod, data) {
-    const laboratorio = await MySQL.edit({
+    const laboratorio = await OracleDB.edit({
       tableName: TableNames.LABORATORIO,
       cod,
       data,
@@ -39,7 +39,7 @@ class LaboratorioModel {
   }
 
   static async delete(cod) {
-    const laboratorio = await MySQL.delete({
+    const laboratorio = await OracleDB.delete({
       tableName: TableNames.LABORATORIO,
       cod,
     });
